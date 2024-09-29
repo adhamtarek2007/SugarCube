@@ -1,0 +1,235 @@
+body{
+    font-family: CAIRO;
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 100px auto 100px;
+}
+
+input:focus {
+    outline: none;
+}
+
+
+:root {
+    --clr1: rgb(19, 173, 153);
+}
+
+header{
+    background-color: #ffffff;
+    padding-bottom: 5px;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 7px -1px black;
+    z-index: 100;
+}
+
+
+.logo {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    height: 60px;
+    padding: 10px;
+}
+
+
+.title{
+    font-size: 20px;
+    padding-left: 10px;
+    margin-top: 3px;
+}
+
+nav ul {
+    list-style: none;
+    display: inline-flex; 
+    padding-left: 0;
+    margin: 0 20px;
+    gap: 25px;
+}
+
+nav ul li {
+    margin: 10px auto;
+    font-weight: bold;
+    border-bottom:  2px transparent solid;
+}
+
+nav ul li:hover {
+    border-bottom: 2px var(--clr1) solid;
+    cursor: pointer;
+}
+
+.contact a{
+    color: black;
+    text-decoration: none;
+}
+
+.Home a {
+    color: black;
+    text-decoration: none;
+}
+
+.menu {
+    height: 30px;
+    width: 30px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: rgb(34, 32, 32);
+    position: relative;
+    height: 100px;
+    grid-row: 3 / 4;
+    grid-column: 1 / 7;
+}
+
+.links {
+    width: 65%;
+    color: rgb(118, 118, 118);
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 30px;
+}
+
+.links span{
+    cursor: pointer;
+}
+
+.links::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: rgb(59, 59, 59);
+    top: 110%;
+}
+
+footer img {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    height: 70px;
+    opacity: 50%;
+}
+
+header input{
+    all: initial;
+    height: 33px;
+    width: 273px;
+    border: 0.01px solid #7d7d7d;
+    border-radius: 51px;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+header [type="text"]::placeholder {
+    position: absolute;
+    left: 10px;
+}
+
+a.sign {
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+    outline: 0.000001px solid #7d7d7d;
+    border-radius: 27px;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    width: 57px;
+    text-align: center;
+    font-weight: 400;
+    transition-duration: 0.2s;
+}
+
+a.sign:hover {
+    color: white;
+    background-color: var(--clr1);
+}
+
+.signin {
+    grid-row: 2 / 3;
+    grid-column: 3 / 5;
+    background-color: #dfdfdf;
+    width: 400px;
+    height: 500px;
+    margin-top: 20px;
+    border: 0.1px solid #7d7d7d;
+    border-radius: 20px;
+    position: relative;
+    background-image: linear-gradient(-45deg, white 30%, var(--clr1));
+}
+
+.signin img {
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translate(-50%);
+}
+
+.signin input[type="text"],
+.signin input[type="password"]{
+    display: block;
+    margin: 20px auto;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 60%;
+    height: 45px;
+    border-radius: 20px;
+    border: 0.1px solid #7d7d7d;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.signin input::placeholder {
+    position: absolute;
+    left: 10px;
+    color: var(--clr1);
+}
+
+.signin form input:nth-child(2) {
+    display: block;
+    margin: 20px auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.signin [type="submit"] {
+    position: absolute;
+    top: 69%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 125px;
+    height: 50px;
+    border-radius: 24px;
+    border: 0.1px solid #7d7d7d;
+    background-color: var(--clr1);
+    color: white;
+    font-size: 19px;
+    transition: 0.2s;
+}
+
+.signin [type="submit"]:hover {
+    background-color: white;
+    color: black;
+}
+
+.signin span {
+    position: absolute;
+    top: 86%;
+    left: 8%;
+}
